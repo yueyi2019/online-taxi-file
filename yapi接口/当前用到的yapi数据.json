@@ -1,0 +1,1085 @@
+[
+  {
+    "name": "service-order-dispatch",
+    "desc": null,
+    "add_time": 1571452321,
+    "up_time": 1571452321,
+    "index": 0,
+    "list": [
+      {
+        "_id": 84753,
+        "method": "GET",
+        "catid": 7740,
+        "title": "派发订单",
+        "path": "/dispatch/call/{orderId}",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1571452371,
+        "up_time": 1571452507,
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"string\"}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [
+          {
+            "_id": "5daa765b651b830efcb1baef",
+            "desc": "订单号",
+            "name": "orderId"
+          }
+        ],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/dispatch/call/{orderId}",
+          "params": []
+        },
+        "type": "var",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "service-jms-produce",
+    "desc": null,
+    "add_time": 1572447005,
+    "up_time": 1572447005,
+    "index": 0,
+    "list": [
+      {
+        "_id": 127161,
+        "method": "POST",
+        "catid": 11336,
+        "title": "生产消息",
+        "path": "/produce/order",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1572447130,
+        "up_time": 1572447165,
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "form",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [
+          {
+            "_id": "5db9a3bd651b830efcb263af",
+            "type": "text",
+            "name": "destination",
+            "required": "1"
+          },
+          {
+            "_id": "5db9a3bd651b830efcb263ae",
+            "desc": "",
+            "example": "",
+            "type": "text",
+            "name": "message",
+            "required": "1"
+          }
+        ],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5db9a3bd651b830efcb263ad",
+            "value": "application/x-www-form-urlencoded",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/produce/order",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "service-app-update",
+    "desc": null,
+    "add_time": 1573866734,
+    "up_time": 1573866734,
+    "index": 0,
+    "list": [
+      {
+        "_id": 162385,
+        "method": "POST",
+        "catid": 16285,
+        "title": "查询最新安装包",
+        "path": "/app-version/latest",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1573866775,
+        "up_time": 1573868767,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"platformType\":{\"type\":\"integer\"},\"appType\":{\"type\":\"integer\"},\"versionCode\":{\"type\":\"integer\"}},\"required\":[\"platformType\",\"appType\",\"versionCode\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"integer\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"noticeType\":{\"type\":\"integer\",\"description\":\"1：强制，2：非强制\"},\"appVersion\":{\"type\":\"string\",\"description\":\"当前版本号，用户看\"},\"prompt\":{\"type\":\"string\",\"description\":\"更新提示语\"},\"downloadUrl\":{\"type\":\"string\",\"description\":\"下载地址\"},\"versionCode\":{\"type\":\"integer\",\"description\":\"版本号，程序计算\"}},\"required\":[\"noticeType\",\"appVersion\",\"prompt\",\"downloadUrl\",\"versionCode\"]}}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5dcf54dff8fc14531f497dcd",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/app-version/latest",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "service-valuation",
+    "desc": "计价服务",
+    "add_time": 1575381570,
+    "up_time": 1575381570,
+    "index": 0,
+    "list": [
+      {
+        "_id": 252765,
+        "method": "POST",
+        "catid": 58894,
+        "title": "预估价格-未认证",
+        "path": "/forecast/single",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1575381602,
+        "up_time": 1575468409,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"startLatitude\":{\"type\":\"string\",\"description\":\"起点纬度\"},\"startLongitude\":{\"type\":\"string\",\"description\":\"起点经度\"},\"endLatitude\":{\"type\":\"string\",\"description\":\"终点纬度\"},\"endLongitude\":{\"type\":\"string\",\"description\":\"终点经度\"}},\"required\":[\"startLatitude\",\"startLongitude\",\"endLatitude\",\"endLongitude\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"integer\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"number\",\"description\":\"价格\"}},\"required\":[\"price\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5de7bd79f8fc14531f4ab0c9",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/forecast/single",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "api-driver",
+    "desc": null,
+    "add_time": 1579262844,
+    "up_time": 1579262844,
+    "index": 0,
+    "list": [
+      {
+        "_id": 461829,
+        "method": "POST",
+        "catid": 122544,
+        "title": "司机获取验证码",
+        "path": "/sms/verify-code/send/?1=1",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1579262874,
+        "up_time": 1579263079,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"phoneNumber\":{\"type\":\"string\"}},\"required\":[\"phoneNumber\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5e21a46725cfa92bc249e5c9",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/sms/verify-code/send/",
+          "params": [
+            {
+              "_id": "5e21a46725cfa92bc249e5ca",
+              "value": "1",
+              "name": "1"
+            }
+          ]
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 229185,
+        "method": "GET",
+        "catid": 122544,
+        "title": "学习：根据serviceName获取服务端信息",
+        "path": "/sms/choseServiceName/{serviceName}",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1574868473,
+        "up_time": 1581346049,
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [
+          {
+            "_id": "5e416d0125cfa92bc24a760f",
+            "desc": "",
+            "name": "serviceName"
+          }
+        ],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/sms/choseServiceName/{serviceName}",
+          "params": []
+        },
+        "type": "var",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 564757,
+        "method": "GET",
+        "catid": 122544,
+        "title": "学习：根据serviceName获取服务端信息_copy",
+        "path": "/sms/choseServiceName_1581346164642",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1581346025,
+        "up_time": 1581346025,
+        "__v": 0,
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": false,
+        "req_body_form": [],
+        "req_body_is_json_schema": false,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/sms/choseServiceName_1581346164642",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "api-passenger",
+    "desc": "乘客api",
+    "add_time": 1570762550,
+    "up_time": 1570762550,
+    "index": 1,
+    "list": [
+      {
+        "_id": 54730,
+        "method": "POST",
+        "catid": 4265,
+        "title": "登录注册",
+        "path": "/auth/login",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570762604,
+        "up_time": 1570887741,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"phoneNumber\":{\"type\":\"string\",\"description\":\"手机号\"},\"code\":{\"type\":\"string\",\"description\":\"验证码\"}},\"required\":[\"phoneNumber\",\"code\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da1d83dbca51434887b4f19",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/auth/login",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 252777,
+        "method": "POST",
+        "catid": 4265,
+        "title": "预估价格",
+        "path": "/order/forecast",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1575382881,
+        "up_time": 1575383001,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"startLatitude\":{\"type\":\"string\"},\"startLongitude\":{\"type\":\"string\"},\"endLatitude\":{\"type\":\"string\"},\"endLongitude\":{\"type\":\"string\"}},\"required\":[\"startLatitude\",\"startLongitude\",\"endLatitude\",\"endLongitude\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"integer\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"number\"}},\"required\":[\"price\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5de66fd9f8fc14531f4aa6f6",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/order/forecast",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 416281,
+        "method": "POST",
+        "catid": 4265,
+        "title": "预估价格_测试",
+        "path": "/order/forecast-test",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"startLatitude\":{\"type\":\"string\"},\"startLongitude\":{\"type\":\"string\"},\"endLatitude\":{\"type\":\"string\"},\"endLongitude\":{\"type\":\"string\"}},\"required\":[\"startLatitude\",\"startLongitude\",\"endLatitude\",\"endLongitude\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"integer\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"number\"}},\"required\":[\"price\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "uid": 9267,
+        "add_time": 1578876704,
+        "up_time": 1578876734,
+        "__v": 0,
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5e1bbf3eaa294e73e1e5796c",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/order/forecast-test",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 56606,
+        "method": "POST",
+        "catid": 4265,
+        "title": "发送验证码",
+        "path": "/sms/verify-code/send",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570774726,
+        "up_time": 1570781201,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"phoneNumber\":{\"type\":\"string\"}},\"required\":[\"phoneNumber\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{}}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 1,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da03811bca51434887b43a6",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/sms/verify-code/send",
+          "params": []
+        },
+        "type": "static",
+        "status": "done",
+        "edit_uid": 0
+      },
+      {
+        "_id": 61639,
+        "method": "GET",
+        "catid": 4265,
+        "title": "获取乘客资料信息",
+        "path": "/info/get/{passengerId}",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570935096,
+        "up_time": 1570935265,
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\",\"description\":\"状态码\"},\"message\":{\"type\":\"string\",\"description\":\"提示语\"},\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"description\":\"乘客ID\"},\"passengerName\":{\"type\":\"string\",\"description\":\"姓名\"},\"gender\":{\"type\":\"number\",\"description\":\"性别0：女，1：男\"},\"headImg\":{\"type\":\"string\",\"description\":\"头像地址\"}},\"required\":[\"id\",\"passengerName\",\"gender\",\"headImg\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "tag": [],
+        "index": 3,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [
+          {
+            "_id": "5da291e1bca51434887b51d7",
+            "desc": "乘客ID",
+            "name": "passengerId"
+          }
+        ],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/info/get/{passengerId}",
+          "params": []
+        },
+        "type": "var",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 61478,
+        "method": "POST",
+        "catid": 4265,
+        "title": "乘客资料维护",
+        "path": "/info/edit",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570892102,
+        "up_time": 1570935053,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"id\":{\"type\":\"number\",\"description\":\"乘客ID\"},\"passengerName\":{\"type\":\"string\",\"description\":\"姓名\"},\"gender\":{\"type\":\"number\",\"description\":\"性别：0：女，1：男\"},\"headImg\":{\"type\":\"string\",\"description\":\"头像\"}},\"required\":[\"id\",\"passengerName\",\"gender\",\"headImg\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"状态码\"},\"message\":{\"type\":\"string\",\"description\":\"提示语\"},\"data\":{\"type\":\"string\"}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 4,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da2910dbca51434887b51d5",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/info/edit",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 79545,
+        "method": "POST",
+        "catid": 4265,
+        "title": "支付宝预支付",
+        "path": "/alipay-pay/pre/",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"passenger_id\":{\"type\":\"number\",\"description\":\"乘客ID\"},\"capital\":{\"type\":\"number\",\"description\":\"本金\"},\"giveFee\":{\"type\":\"number\",\"description\":\"赠费\"},\"source\":{\"type\":\"number\",\"description\":\"1：Android，2：iOS\"},\"rechargeType\":{\"type\":\"number\",\"description\":\"充值类型：1：仅充值，2：充值后消费\"}},\"required\":[\"passenger_id\",\"capital\",\"giveFee\",\"source\",\"rechargeType\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"string\",\"description\":\"支付宝需要的支付信息\"}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "uid": 9267,
+        "add_time": 1571316109,
+        "up_time": 1571316699,
+        "__v": 0,
+        "tag": [],
+        "index": 5,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da863db651b830efcb1b12c",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/alipay-pay/pre/",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 79489,
+        "method": "POST",
+        "catid": 4265,
+        "title": "微信预支付",
+        "path": "/wx-pay/pre/",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1571315592,
+        "up_time": 1571316099,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"passenger_id\":{\"type\":\"number\",\"description\":\"乘客ID\"},\"capital\":{\"type\":\"number\",\"description\":\"本金\"},\"giveFee\":{\"type\":\"number\",\"description\":\"赠费\"},\"source\":{\"type\":\"number\",\"description\":\"1：Android，2：iOS\"},\"rechargeType\":{\"type\":\"number\",\"description\":\"充值类型：1：仅充值，2：充值后消费\"}},\"required\":[\"passenger_id\",\"capital\",\"giveFee\",\"source\",\"rechargeType\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"appId\":{\"type\":\"string\"},\"timeStamp\":{\"type\":\"number\"},\"nonceStr\":{\"type\":\"string\"},\"packageData\":{\"type\":\"string\"},\"prepayId\":{\"type\":\"string\"},\"partnerId\":{\"type\":\"string\"},\"paySign\":{\"type\":\"string\"},\"outTradeNo\":{\"type\":\"string\"}},\"required\":[\"appId\",\"timeStamp\",\"nonceStr\",\"packageData\",\"prepayId\",\"partnerId\",\"paySign\",\"outTradeNo\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 6,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da86183651b830efcb1b125",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/wx-pay/pre/",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "service-sms",
+    "desc": "短信服务",
+    "add_time": 1570776668,
+    "up_time": 1570776668,
+    "index": 2,
+    "list": [
+      {
+        "_id": 58384,
+        "method": "GET",
+        "catid": 4471,
+        "title": "整体接口描述",
+        "path": "/service-sms/all",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570798104,
+        "up_time": 1570798435,
+        "__v": 0,
+        "markdown": "短信服务整体接口描述\n1、根据模板发送短信。\n    接受各种发送短信的需求。可以自定义接收者，自定义模板。兼容腾讯短信通，阿里短信服务，华信，容联等短信供应商。",
+        "desc": "<p>短信服务整体接口描述<br>\n1、根据模板发送短信。<br>\n&nbsp; &nbsp; 接受各种发送短信的需求。可以自定义接收者，自定义模板。兼容腾讯短信通，阿里短信服务，华信，容联等短信供应商。</p>\n",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/service-sms/all",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 56809,
+        "method": "POST",
+        "catid": 4471,
+        "title": "根据模板发送短信",
+        "path": "/send/alisms-template",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570776702,
+        "up_time": 1570781213,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"receivers\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"templateMap\":{\"type\":\"object\",\"properties\":{}}},\"required\":[\"id\",\"templateMap\"]}}},\"required\":[\"receivers\",\"data\"]}",
+        "markdown": "根据模板发送短信",
+        "desc": "<p>根据模板发送短信</p>\n",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"string\"}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 1,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da0381dbca51434887b43ab",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/send/alisms-template",
+          "params": []
+        },
+        "type": "static",
+        "status": "done",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "service-passenger-user",
+    "desc": null,
+    "add_time": 1570807403,
+    "up_time": 1570807403,
+    "index": 3,
+    "list": [
+      {
+        "_id": 58496,
+        "method": "POST",
+        "catid": 4703,
+        "title": "乘客用户登录注册",
+        "path": "/login/passenger",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570807515,
+        "up_time": 1570807748,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"phoneNumber\":{\"type\":\"string\"}},\"required\":[\"phoneNumber\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{}}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da09fc4bca51434887b4627",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/login/passenger",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 58503,
+        "method": "GET",
+        "catid": 4703,
+        "title": "分配token",
+        "path": "/auth/token/generate/{passengerId}",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570807927,
+        "up_time": 1570808087,
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"token\":{\"type\":\"string\"}},\"required\":[\"token\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [
+          {
+            "_id": "5da0a117bca51434887b4628",
+            "desc": "",
+            "name": "passengerId"
+          }
+        ],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/auth/token/generate/{passengerId}",
+          "params": []
+        },
+        "type": "var",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 61646,
+        "method": "GET",
+        "catid": 4703,
+        "title": "获取乘客用户信息",
+        "path": "/user/get/{userId}",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\",\"description\":\"状态码\"},\"message\":{\"type\":\"string\",\"description\":\"提示语\"},\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\",\"description\":\"乘客ID\"},\"passengerName\":{\"type\":\"string\",\"description\":\"姓名\"},\"gender\":{\"type\":\"number\",\"description\":\"性别0：女，1：男\"},\"headImg\":{\"type\":\"string\",\"description\":\"头像地址\"},\"passengerType\":{\"type\":\"string\",\"description\":\"乘客类型1：个人用户，2：企业用户\"},\"birthday\":{\"type\":\"number\",\"description\":\"生日时间戳，毫秒值\"}},\"required\":[\"id\",\"passengerName\",\"gender\",\"headImg\",\"passengerType\",\"birthday\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "uid": 9267,
+        "add_time": 1570935288,
+        "up_time": 1570935458,
+        "__v": 0,
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [
+          {
+            "_id": "5da292a2bca51434887b51d8",
+            "desc": "",
+            "name": "userId"
+          }
+        ],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/user/get/{userId}",
+          "params": []
+        },
+        "type": "var",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 58510,
+        "method": "GET",
+        "catid": 4703,
+        "title": "验证token",
+        "path": "/auth/token/check",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570808166,
+        "up_time": 1570808357,
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"subject\":{\"type\":\"string\"}},\"required\":[\"subject\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [
+          {
+            "_id": "5da0a225bca51434887b4629",
+            "desc": "",
+            "name": "token",
+            "required": "1"
+          }
+        ],
+        "query_path": {
+          "path": "/auth/token/check",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "service-verification-code",
+    "desc": "短信验证码",
+    "add_time": 1570779538,
+    "up_time": 1570779538,
+    "index": 4,
+    "list": [
+      {
+        "_id": 58391,
+        "method": "GET",
+        "catid": 4513,
+        "title": "整体接口描述",
+        "path": "/service-verification-code/all",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570798406,
+        "up_time": 1570798860,
+        "__v": 0,
+        "markdown": "1、生成验证码\n登录注册验证码：支持多用户：乘客、司机、后台等，根据需求生成相应的验证码，并存到缓存中，设置过期时间。\n\n2、校验短信验证码\n登录注册验证码校验：按照业务规则校验上面生成二维码的合法性。",
+        "desc": "<p>1、生成验证码<br>\n登录注册验证码：支持多用户：乘客、司机、后台等，根据需求生成相应的验证码，并存到缓存中，设置过期时间。</p>\n<p>2、校验短信验证码<br>\n登录注册验证码校验：按照业务规则校验上面生成二维码的合法性。</p>\n",
+        "res_body": "",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/service-verification-code/all",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      },
+      {
+        "_id": 57075,
+        "method": "GET",
+        "catid": 4513,
+        "title": "生成验证码",
+        "path": "/verify-code/generate/{identity}/{phoneNumber}",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570779571,
+        "up_time": 1570781234,
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"}},\"required\":[\"code\"]}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "tag": [],
+        "index": 1,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [
+          {
+            "_id": "5da03832bca51434887b43ae",
+            "desc": "1：乘客，2：司机",
+            "example": "1",
+            "name": "identity"
+          },
+          {
+            "_id": "5da03832bca51434887b43ad",
+            "desc": "",
+            "example": "13412341234",
+            "name": "phoneNumber"
+          }
+        ],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/verify-code/generate/{identity}/{phoneNumber}",
+          "params": []
+        },
+        "type": "var",
+        "status": "done",
+        "edit_uid": 0
+      },
+      {
+        "_id": 57145,
+        "method": "POST",
+        "catid": 4513,
+        "title": "校验验证码",
+        "path": "/verify-code/verify",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570780441,
+        "up_time": 1570781224,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"identity\":{\"type\":\"number\"},\"phoneNumber\":{\"type\":\"string\"},\"code\":{\"type\":\"string\"}},\"required\":[\"identity\",\"phoneNumber\",\"code\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"},\"data\":{\"type\":\"string\"}},\"required\":[\"code\",\"message\",\"data\"]}",
+        "req_body_type": "json",
+        "tag": [],
+        "index": 2,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [
+          {
+            "_id": "5da03828bca51434887b43ac",
+            "value": "application/json",
+            "name": "Content-Type",
+            "required": "1"
+          }
+        ],
+        "req_query": [],
+        "query_path": {
+          "path": "/verify-code/verify",
+          "params": []
+        },
+        "type": "static",
+        "status": "done",
+        "edit_uid": 0
+      }
+    ]
+  },
+  {
+    "name": "DB设计",
+    "desc": null,
+    "add_time": 1570782449,
+    "up_time": 1570782449,
+    "index": 5,
+    "list": [
+      {
+        "_id": 57264,
+        "method": "GET",
+        "catid": 4567,
+        "title": "乘客用户表",
+        "path": "/",
+        "project_id": 4391,
+        "res_body_type": "json",
+        "uid": 9267,
+        "add_time": 1570782470,
+        "up_time": 1570783442,
+        "__v": 0,
+        "markdown": "|  |  |  |  |  |\n| --- | --- | --- | --- | --- |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |",
+        "desc": "<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "tag": [],
+        "index": 0,
+        "api_opened": false,
+        "res_body_is_json_schema": true,
+        "req_body_form": [],
+        "req_body_is_json_schema": true,
+        "req_params": [],
+        "req_headers": [],
+        "req_query": [],
+        "query_path": {
+          "path": "/",
+          "params": []
+        },
+        "type": "static",
+        "status": "undone",
+        "edit_uid": 0
+      }
+    ]
+  }
+]
