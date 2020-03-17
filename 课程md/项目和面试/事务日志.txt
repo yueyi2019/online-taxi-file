@@ -1,0 +1,17 @@
+2020-03-16 16:57:00.308  INFO 22284 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8002
+2020-03-16 16:57:00.310  INFO 22284 --- [  restartedMain] c.online.taxi.two.SeataRmTwoApplication  : Started SeataRmTwoApplication in 11.965 seconds (JVM running for 13.122)
+2020-03-16 16:57:00.326  INFO 22284 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEATA-TWO/192.168.0.101:seata-two:8002: registering service...
+2020-03-16 16:57:00.354  INFO 22284 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEATA-TWO/192.168.0.101:seata-two:8002 - registration status: 204
+2020-03-16 16:57:30.573  INFO 22284 --- [tch_RMROLE_1_16] i.s.core.rpc.netty.RmMessageListener     : onMessage:UndoLogDeleteRequest{resourceId='jdbc:mysql://localhost:3306/seata-rm-two', saveDays=7, branchType=AT}
+2020-03-16 16:58:42.565 DEBUG 22284 --- [nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/test/rm2", parameters={}
+2020-03-16 16:58:42.591 DEBUG 22284 --- [nio-8002-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.online.taxi.two.controller.TestController.rm1()
+2020-03-16 16:58:42.929  INFO 22284 --- [nio-8002-exec-1] i.s.common.loader.EnhancedServiceLoader  : load LoadBalance[null] extension by class[io.seata.discovery.loadbalance.RandomLoadBalance]
+2020-03-16 16:58:43.121  WARN 22284 --- [nio-8002-exec-1] i.s.common.loader.EnhancedServiceLoader  : load [io.seata.rm.datasource.undo.parser.ProtostuffUndoLogParser] class fail. io/protostuff/runtime/RuntimeEnv
+2020-03-16 16:58:43.124  INFO 22284 --- [nio-8002-exec-1] i.s.common.loader.EnhancedServiceLoader  : load UndoLogParser[jackson] extension by class[io.seata.rm.datasource.undo.parser.JacksonUndoLogParser]
+2020-03-16 16:58:43.219 DEBUG 22284 --- [nio-8002-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, image/gif, image/jpeg, */*;q=.2, */*;q=.2] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-16 16:58:43.220 DEBUG 22284 --- [nio-8002-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["rm2 成功"]
+2020-03-16 16:58:43.236 DEBUG 22284 --- [nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-16 16:58:43.456  INFO 22284 --- [tch_RMROLE_1_16] i.s.core.rpc.netty.RmMessageListener     : onMessage:xid=192.168.0.101:8091:2038076870,branchId=2038076873,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata-rm-two,applicationData=null
+2020-03-16 16:58:43.461  INFO 22284 --- [tch_RMROLE_1_16] io.seata.rm.AbstractRMHandler            : Branch Rollbacking: 192.168.0.101:8091:2038076870 2038076873 jdbc:mysql://localhost:3306/seata-rm-two
+2020-03-16 16:58:43.548  INFO 22284 --- [tch_RMROLE_1_16] i.s.r.d.undo.AbstractUndoLogManager      : xid 192.168.0.101:8091:2038076870 branch 2038076873, undo_log deleted with GlobalFinished
+2020-03-16 16:58:43.549  INFO 22284 --- [tch_RMROLE_1_16] io.seata.rm.AbstractRMHandler            : Branch Rollbacked result: PhaseTwo_Rollbacked
